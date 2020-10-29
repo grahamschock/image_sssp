@@ -12,4 +12,4 @@ npm start
 
 ```
 
-![A Bee?](bee.gif)
+![A Bee?](demo.gif)
