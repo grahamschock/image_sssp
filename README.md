@@ -1,4 +1,5 @@
-Trying to do cool stuff to images
+![A Bee?](demo_2.gif)
+
 
 ```
 # Clone this repository
@@ -11,5 +12,3 @@ npm install
 npm start
 
 ```
-![A Bee?](demo_2.gif)
-
