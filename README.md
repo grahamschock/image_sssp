@@ -11,5 +11,5 @@ npm install
 npm start
 
 ```
+![A Bee?](demo_2.gif)
 
-![A Bee?](demo.gif)
