@@ -1,31 +1,22 @@
 <html>
-<img id="bee" width="220" height="277" src="bee.jpg" alt="Bee">    
-
   <canvas id="myCanvas" width="350" height="450" style="border:1px solid #d3d3d3;">
     
   </canvas>
-  
+<script src="https://www.marvinj.org/releases/marvinj-1.0.js"></script>
+<script src = "image_sssp.js"></script>
+  <script type="text/javascript">
 
-<script type="text/javascript">
+    // Graph and Djikstra implementation from: https://medium.com/@adriennetjohnson/a-walkthrough-of-dijkstras-algorithm-in-javascript-e94b74192026
 
-  var c = document.getElementById("myCanvas");
- 
-window.onload = init;
-  function init() {
-      var ctx = c.getContext("2d");
-      var img = document.getElementById("bee");
-      ctx.drawImage(img, 10, 10, 220 * 1.5 , 277 * 1.5);  
-      
-	if (window.Event) {
-	document.captureEvents(Event.MOUSEMOVE);
-	}
-	document.onmousemove = getCursorXY;
-}
 
+
+    load_image();
 function getCursorXY(e) {
-	var x_cordinate  = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+    var x_cordinate  = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+    
     var y_cordinate = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-var pixelData = c.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;    
+    
+    var pixelData = c.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;    
 
     document.getElementById('cursorX').value = x_cordinate;
     document.getElementById('cursorY').value = y_cordinate;
@@ -35,12 +26,12 @@ var pixelData = c.getContext('2d').getImageData(event.offsetX, event.offsetY, 1,
 
     c.getContext('2d').fillStyle = "#FF0000";
     c.getContext('2d').fillRect(event.offsetX, event.offsetY, 1, 1);
-    
 
-    
     
 }
 
+
+  
 </script>
 
 <body>

@@ -20,7 +20,6 @@
     "electron": "^9.3.3"
   },
   "dependencies": {
-    "node-typewriter": "0.0.2",
-    "typewriter-effect": "^2.13.1"
+    "marvinj": "^1.0.0"
   }
 }

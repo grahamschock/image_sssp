@@ -1,5 +1,7 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
+require('marvinj');
+
 const path = require('path')
 
 function createWindow () {
@@ -12,6 +14,7 @@ function createWindow () {
     }
   })
 
+
   // and load the index.html of the app.
     mainWindow.loadFile('index.html')
 
@@ -20,12 +23,14 @@ function createWindow () {
 
    
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+		mainWindow.webContents.openDevTools()
+
+		console.log("Created");
+
 }
 
-function typeWriter() {
-    console.log("typing...");
-}
+
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
